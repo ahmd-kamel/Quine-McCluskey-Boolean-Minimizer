@@ -51,7 +51,7 @@ def get_minterms(expression):
     minterms = []
     vars = extract_vars(expression)
     bool_expr = parse_boolean_expression(expression)
-    tt_values = list(itertools.product([False, True], repeat=len(vars)))
+    tt_values = list(itertools.product([0, 1], repeat=len(vars)))
 
     for value in tt_values:
         vars_values = dict(zip(vars, value))
